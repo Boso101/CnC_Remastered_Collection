@@ -6283,7 +6283,7 @@ int HouseClass::AI_Infantry(void)
 	if (BuildInfantry != INFANTRY_NONE) return(TICKS_PER_SECOND);
 	if (CurInfantry >= Control.MaxInfantry) return(TICKS_PER_SECOND);
 
-	if (Session.Type == GAME_NORMAL) {
+	
 		TechnoTypeClass const * techno = 0;
 		int counter[INFANTRY_COUNT];
 		memset(counter, 0x00, sizeof(counter));
@@ -6368,7 +6368,7 @@ int HouseClass::AI_Infantry(void)
 			BuildInfantry = bestlist[pick];
 		}
 
-	}
+	
 #ifdef ORIGINAL_SKIR
 	if (IsBaseBuilding) {
 		HouseClass const * enemy = NULL;
