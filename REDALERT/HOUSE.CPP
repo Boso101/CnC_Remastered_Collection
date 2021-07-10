@@ -129,7 +129,7 @@
  *   HouseClass::AI_Raise_Money -- Raise emergency cash by selling buildings.                  *
  *   HouseClass::Random_Cell_In_Zone -- Find a (technically) legal cell in the zone specified. *
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
+#define ORIGINAL_SKIR = false
 #include	"function.h"
 #include	"vortex.h"
 
@@ -6114,7 +6114,7 @@ int HouseClass::AI_Unit(void)
 			BuildUnit = bestlist[Random_Pick(0, bestcount-1)];
 		}
 	}
-
+#ifdef ORIGINAL_SKIR
 	if (IsBaseBuilding) {
 
 		int counter[UNIT_COUNT];
@@ -6145,7 +6145,7 @@ int HouseClass::AI_Unit(void)
 			}
 		}
 	}
-
+#endif
 	return(TICKS_PER_SECOND);
 }
 
