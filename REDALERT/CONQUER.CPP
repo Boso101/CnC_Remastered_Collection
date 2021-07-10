@@ -690,8 +690,11 @@ void Keyboard_Process(KeyNumType & input)
 				{
 					OutList.Add(EventClass(TargetClass(tech), MISSION_GUARD_AREA));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> parent of f961ac6 (Automatic Units)
 =======
 >>>>>>> parent of f961ac6 (Automatic Units)
 				}
