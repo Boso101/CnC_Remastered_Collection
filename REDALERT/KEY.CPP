@@ -221,6 +221,7 @@ bool WWKeyboardClass::Put_Key_Message(unsigned short vk_key, bool release)
 			vk_key |= WWKEY_SHIFT_BIT;
 		}
 		if ((GetKeyState(VK_CONTROL) & 0x8000) != 0) {
+			
 			vk_key |= WWKEY_CTRL_BIT;
 		}
 		if ((GetKeyState(VK_MENU) & 0x8000) != 0) {

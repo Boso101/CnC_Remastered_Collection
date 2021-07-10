@@ -685,12 +685,29 @@ void Keyboard_Process(KeyNumType & input)
 			for (index = 0; index < CurrentObject.Count(); index++) {
 				ObjectClass const * tech = CurrentObject[index];
 
-				if (tech != NULL && tech->Can_Player_Move() && tech->Can_Player_Fire()) {
-					//OutList.Add(EventClass(TargetClass(tech), MISSION_GUARD_AREA));
-					HouseClass* house = HouseClass::As_Pointer(tech->Owner());
-					//Change our house
-					PlayerPtr = house;
+
+				if (tech != NULL && tech->Can_Player_Move() && tech->Can_Player_Fire())
+				{
+					OutList.Add(EventClass(TargetClass(tech), MISSION_GUARD_AREA));
+
+
 				}
+				else if (tech != NULL && !tech->Can_Player_Move() && !tech->Can_Player_Fire()) {
+
+					
+					HouseClass* house = HouseClass::As_Pointer(tech->Owner());
+					
+					if (house != PlayerPtr)
+					{	
+						
+						//Change our house
+						PlayerPtr = house;
+					}
+				
+				
+				}
+
+				return;
 			}
 		}
 		input = KN_NONE;
