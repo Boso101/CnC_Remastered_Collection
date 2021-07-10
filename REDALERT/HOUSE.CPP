@@ -6366,7 +6366,7 @@ int HouseClass::AI_Infantry(void)
 		}
 
 	}
-
+#ifdef ORIGINAL_SKIR
 	if (IsBaseBuilding) {
 		HouseClass const * enemy = NULL;
 		if (Enemy != HOUSE_NONE) {
@@ -6452,6 +6452,7 @@ int HouseClass::AI_Infantry(void)
 			}
 		}
 	}
+#endif
 	return(TICKS_PER_SECOND);
 }
 
