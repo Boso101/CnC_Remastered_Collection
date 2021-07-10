@@ -687,6 +687,7 @@ void Keyboard_Process(KeyNumType & input)
 
 				if (tech != NULL && tech->Can_Player_Move() && tech->Can_Player_Fire()) {
 					OutList.Add(EventClass(TargetClass(tech), MISSION_GUARD_AREA));
+					tech->Is_Players_Army = false;
 				}
 			}
 		}
