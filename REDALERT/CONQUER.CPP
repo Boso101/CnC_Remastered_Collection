@@ -689,44 +689,10 @@ void Keyboard_Process(KeyNumType & input)
 				if (tech != NULL && tech->Can_Player_Move() && tech->Can_Player_Fire())
 				{
 					OutList.Add(EventClass(TargetClass(tech), MISSION_GUARD_AREA));
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> parent of f961ac6 (Automatic Units)
-=======
->>>>>>> parent of f961ac6 (Automatic Units)
 				}
 
-				//Other Unit
-				else  
-				{
-	
-					HouseClass* house = HouseClass::As_Pointer(tech->Owner());
-					
-					if (house != PlayerPtr)
-					{	
-						//Make ourselves an AI
-						PlayerPtr->IQ = 5;
-						PlayerPtr->IsPlayerControl = false;
-						PlayerPtr->IsBaseBuilding = true;
-
-						
-
-						//Make new house non AI
-						//Change our house
-						PlayerPtr = house;
-						PlayerPtr->IQ = 0;
-						PlayerPtr->IsPlayerControl = true;
-						PlayerPtr->IsBaseBuilding = false;
-
-						input = KN_NONE;
-						return;
-					}
-				
-				
-				}
+			
 
 	
 			}
