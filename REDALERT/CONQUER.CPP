@@ -686,8 +686,10 @@ void Keyboard_Process(KeyNumType & input)
 				ObjectClass const * tech = CurrentObject[index];
 
 				if (tech != NULL && tech->Can_Player_Move() && tech->Can_Player_Fire()) {
-					OutList.Add(EventClass(TargetClass(tech), MISSION_GUARD_AREA));
-					tech->Is_Players_Army = false;
+					//OutList.Add(EventClass(TargetClass(tech), MISSION_GUARD_AREA));
+					HouseClass* house = HouseClass::As_Pointer(tech->Owner());
+					//Change our house
+					PlayerPtr = house;
 				}
 			}
 		}
