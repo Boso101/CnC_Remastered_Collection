@@ -6038,8 +6038,8 @@ int HouseClass::AI_Unit(void)
 		}
 	}
 
-	if (Session.Type == GAME_NORMAL) {
-
+	// Use TeamTypes for skirmish Games
+	
 		int counter[UNIT_COUNT];
 		memset(counter, 0x00, sizeof(counter));
 
@@ -6116,7 +6116,7 @@ int HouseClass::AI_Unit(void)
 		if (bestcount) {
 			BuildUnit = bestlist[Random_Pick(0, bestcount-1)];
 		}
-	}
+
 #ifdef ORIGINAL_SKIR
 	if (IsBaseBuilding) {
 
