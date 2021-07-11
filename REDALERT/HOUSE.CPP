@@ -143,6 +143,7 @@
 */
 #include "SidebarGlyphx.h"
 
+
 TFixedIHeapClass<HouseClass::BuildChoiceClass> HouseClass::BuildChoice;
 
 int TFixedIHeapClass<HouseClass::BuildChoiceClass>::Save(Pipe &) const
