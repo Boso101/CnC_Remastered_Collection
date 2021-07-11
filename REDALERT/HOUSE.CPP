@@ -1025,14 +1025,15 @@ void HouseClass::AI(void)
 	**	Create teams for this house if necessary.
 	** (Use the same timer for some extra capture-the-flag logic.)
 	*/
-	
+	if (!IsAlerted && !TeamTime) {
+
 		TeamTypeClass const * ttype = Suggested_New_Team(false);
 		if (ttype) {
 			ttype->Create_One_Of();
 		}
 
 		TeamTime = Rule.TeamDelay * TICKS_PER_MINUTE;
-	
+	}
 
 	/*
 	**	If there is insufficient power, then all buildings that are above
