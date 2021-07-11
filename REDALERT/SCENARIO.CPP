@@ -2367,12 +2367,13 @@ bool Read_Scenario_INI(char * fname, bool )
 	if (Session.Type == GameType::GAME_GLYPHX_MULTIPLAYER)
 	{
 		CCINIClass aiFile;
+		//RulesClass ruleProcess;
 		
 
 	
 		if (aiFile.Load(CCFileClass("AIConfig.INI"), false))
 		{
-			
+			//ruleProcess.Process(aiFile);
 			TeamTypeClass::Read_INI(aiFile);
 			Call_Back();
 		}
@@ -2931,6 +2932,8 @@ void Assign_Houses(void)
 
 		if (Session.Type != GAME_NORMAL) {
 			housep->IQ = Rule.MaxIQ;
+			housep->IsBaseBuilding = true;
+			housep->IsAlerted = true;
 			
 		}
 
