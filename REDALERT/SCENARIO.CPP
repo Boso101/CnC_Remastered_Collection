@@ -2362,17 +2362,26 @@ bool Read_Scenario_INI(char * fname, bool )
 	HouseClass::Read_INI(ini);
 	Call_Back();
 
-	/*
-	**	Read in the team-type data. The team types must be created before any
-	**	triggers can be created.
-	*/
-	TeamTypeClass::Read_INI(ini);
-	Call_Back();
 
+	//Try Read via AI Mod AI INI file for teams if in Skirmish or whatever
+	if (Session.Type == GameType::GAME_GLYPHX_MULTIPLAYER)
+	{
 
-	//Try Read via AI Mod AI INI file for teams
+		Call_Back();
 
-	Call_Back();
+	}
+	else
+	{
+
+		/*
+		**	Read in the team-type data. The team types must be created before any
+		**	triggers can be created.
+		*/
+		TeamTypeClass::Read_INI(ini);
+		Call_Back();
+	}
+	
+
 
 
 	/*
