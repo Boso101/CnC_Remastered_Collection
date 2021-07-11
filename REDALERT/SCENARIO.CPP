@@ -2366,8 +2366,9 @@ bool Read_Scenario_INI(char * fname, bool )
 	//Try Read via AI Mod AI INI file for teams if in Skirmish or whatever
 	if (Session.Type == GameType::GAME_GLYPHX_MULTIPLAYER)
 	{
-		INIClass aiFile;
-		aiFile.Load(CCFileClass("AI.INI"));
+		CCINIClass aiFile;
+		aiFile.Load(CCFileClass("AI.INI"), true);
+		TeamTypeClass::Read_INI(aiFile);
 		Call_Back();
 
 	}
