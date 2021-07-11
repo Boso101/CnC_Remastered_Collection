@@ -2369,6 +2369,12 @@ bool Read_Scenario_INI(char * fname, bool )
 	TeamTypeClass::Read_INI(ini);
 	Call_Back();
 
+
+	//Try Read via AI Mod AI INI file for teams
+
+	Call_Back();
+
+
 	/*
 	**	Read in the trigger data. The triggers must be created before any other
 	**	objects can be initialized.
