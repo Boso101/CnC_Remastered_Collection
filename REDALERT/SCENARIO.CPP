@@ -2370,7 +2370,7 @@ bool Read_Scenario_INI(char * fname, bool )
 		
 		CCFileClass iniFile("AIConfig.INI");
 	
-		if (aiFile.Load(iniFile, true))
+		if (aiFile.Load(iniFile, false))
 		{
 			
 			TeamTypeClass::Read_INI(aiFile);
