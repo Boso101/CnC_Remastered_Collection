@@ -6255,9 +6255,7 @@ int HouseClass::AI_Vessel(void)
 		}
 	}
 
-	if (IsBaseBuilding) {
-		BuildVessel = VESSEL_NONE;
-	}
+
 
 	return(TICKS_PER_SECOND);
 }

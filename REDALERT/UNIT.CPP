@@ -3786,7 +3786,7 @@ int UnitClass::Mission_Guard(void)
 //		return(MissionControl[Mission].Normal_Delay() + Random_Pick(0, 2));
 	}
 
-	if (*this == UNIT_MCV && House->IsBaseBuilding) {
+	if (*this == UNIT_MCV && !House->IsPlayerControl) {
 		Assign_Mission(MISSION_UNLOAD);
 		return(MissionControl[Mission].Normal_Delay() + Random_Pick(0, 2));
 	}
