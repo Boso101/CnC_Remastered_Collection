@@ -172,6 +172,7 @@ TeamTypeClass::TeamTypeClass(void) :
 	MaxAllowed(0),
 	Fear(0),
 	House(HOUSE_NONE),
+	
 	Trigger(0),
 	Origin(-1),
 	Number(0),
