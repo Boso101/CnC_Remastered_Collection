@@ -6116,6 +6116,8 @@ int HouseClass::AI_Unit(void)
 		if (bestcount) {
 			BuildUnit = bestlist[Random_Pick(0, bestcount-1)];
 		}
+		
+
 
 #ifdef ORIGINAL_SKIR
 	if (IsBaseBuilding) {
@@ -6368,8 +6370,9 @@ int HouseClass::AI_Infantry(void)
 			BuildInfantry = bestlist[pick];
 		}
 
-	
-#ifdef ORIGINAL_SKIR
+
+
+#ifdef ORIGINAL_SKIR_INF
 	if (IsBaseBuilding) {
 		HouseClass const * enemy = NULL;
 		if (Enemy != HOUSE_NONE) {
