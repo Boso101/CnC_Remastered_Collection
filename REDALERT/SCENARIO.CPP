@@ -2367,10 +2367,12 @@ bool Read_Scenario_INI(char * fname, bool )
 	if (Session.Type == GameType::GAME_GLYPHX_MULTIPLAYER)
 	{
 		CCINIClass aiFile;
+		
+		CCFileClass iniFile("AIConfig.INI");
 	
-		if (aiFile.Load(CCFileClass("AI.INI"), false))
+		if (aiFile.Load(iniFile, true))
 		{
-
+			
 			TeamTypeClass::Read_INI(aiFile);
 			Call_Back();
 		}
