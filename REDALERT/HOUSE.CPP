@@ -803,7 +803,9 @@ bool HouseClass::Can_Build(ObjectTypeClass const * type, HousesType house) const
 	/*
 	**	The computer can always build everything.
 	*/
-	if (!IsHuman) return(true);
+	if (!IsHuman && Session.Type == GAME_NORMAL) return(true);
+
+	//TODO: Fix so that skirmish AI can build using teamtypes
 
 	/*
 	**	Special hack to get certain objects to exist for both sides in the game.
