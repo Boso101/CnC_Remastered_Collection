@@ -803,7 +803,7 @@ bool HouseClass::Can_Build(ObjectTypeClass const * type, HousesType house) const
 	/*
 	**	The computer can always build everything.
 	*/
-	if (!IsHuman && Session.Type == GAME_NORMAL) return(true);
+	if (!IsHuman) return(true);
 
 	/*
 	**	Special hack to get certain objects to exist for both sides in the game.
