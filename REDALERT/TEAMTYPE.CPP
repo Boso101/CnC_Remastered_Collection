@@ -350,6 +350,7 @@ void TeamTypeClass::operator delete(void * ptr)
  *=============================================================================================*/
 TeamClass * TeamTypeClass::Create_One_Of(void) const
 {
+	// Maybe get rid of ScenarioInit check so that multiplayer AI can use teamtypes
 	if (ScenarioInit || Number < MaxAllowed) {
 //	if (ScenarioInit || TeamClass::Number[ID] < MaxAllowed) {
 		return(new TeamClass(this, HouseClass::As_Pointer(House)));
