@@ -538,6 +538,8 @@ void TeamClass::AI(void)
 			**	result of reinforcement logic and no longer needs to exist when there
 			**	are no more team members.
 			*/
+
+			//TODO might remove this so skirmish AI works with teams
 			if (IsHasBeen || Session.Type != GAME_NORMAL) {
 
 				/*
