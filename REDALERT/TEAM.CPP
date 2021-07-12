@@ -661,7 +661,9 @@ void TeamClass::AI(void)
 	**	Try to recruit members if there is room to do so for this team.
 	**	Only try to recruit members for a non player controlled team.
 	*/
-	if ((!IsMoving || (!IsFullStrength && Class->IsReinforcable)) && ((!House->IsHuman || !IsHasBeen) && Session.Type == GAME_NORMAL)) {
+
+	//TODO: This might be the problem
+	if ((!IsMoving || (!IsFullStrength && Class->IsReinforcable)) && ((!House->IsHuman || !IsHasBeen))) {
 //	if ((!IsMoving || (!IsFullStrength && Class->IsReinforcable)) && ((/*!House->IsHuman ||*/ !IsHasBeen) && Session.Type == GAME_NORMAL)) {
 		for (int index = 0; index < Class->ClassCount; index++) {
 			if (Quantity[index] < Class->Members[index].Quantity) {
