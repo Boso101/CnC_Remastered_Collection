@@ -372,6 +372,9 @@ void Queue_AI(void)
 			case GAME_MPATH:
 				Queue_AI_Multiplayer();
 				break;
+			case GAME_GLYPHX_MULTIPLAYER:
+				Queue_AI_Normal();
+				break;
 		}
 	}
 
