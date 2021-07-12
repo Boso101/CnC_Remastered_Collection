@@ -1107,7 +1107,7 @@ void GlyphX_Assign_Houses(void)
 		if (!housep->IsHuman) {
 			housep->IsStarted = true;
 			housep->IsAlerted = true; // Enable AutoCreate
-			//housep->IsBaseBuilding = true;
+			housep->IsBaseBuilding = true;
 			strncpy(housep->IniName, Text_String(TXT_COMPUTER), HOUSE_NAME_MAX);
 			housep->IQ = Rule.MaxIQ;
 		
