@@ -810,7 +810,7 @@ bool HouseClass::Can_Build(ObjectTypeClass const * type, HousesType house) const
 	// Just return true if its unit, inf or vessel
 	if (type->What_Am_I() == RTTI_VESSELTYPE || type->What_Am_I() == RTTI_UNITTYPE || type->What_Am_I() == RTTI_INFANTRYTYPE) 
 	{
-		return true;
+		return (true);
 	}
 
 	/*
