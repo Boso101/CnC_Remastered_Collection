@@ -805,7 +805,7 @@ bool HouseClass::Can_Build(ObjectTypeClass const * type, HousesType house) const
 	*/
 	if (!IsHuman && Session.Type == GAME_NORMAL) return(true);
 
-	//TODO: Fix so that skirmish AI can build using teamtypes
+	
 	//Hacky way to let them build teams without breaking structure build order
 	// Just return true if its unit, inf or vessel
 	if (type->What_Am_I() == RTTI_VESSELTYPE || type->What_Am_I() == RTTI_UNITTYPE || type->What_Am_I() == RTTI_INFANTRYTYPE) 
@@ -1326,6 +1326,7 @@ void HouseClass::AI(void)
 		Do_All_To_Hunt();
 	}
 
+	//TODO: Make it so that skirmish AI use teamtypes related to there acts like eg Soviets build USSR teams Allies build Greece teams
 	AI_Building();
 	AI_Unit();
 	AI_Vessel();
