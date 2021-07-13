@@ -6107,6 +6107,8 @@ int HouseClass::AI_Unit(void)
 		**	Pick to build the most needed object but don't consider those objects that
 		**	can't be built because of scenario restrictions or insufficient cash.
 		*/
+
+		//TODO:  May have figured this out, use the ActsLike instead of Class->House for Can_Build Checks
 		int bestval = -1;
 		int bestcount = 0;
 		UnitType bestlist[UNIT_COUNT];
