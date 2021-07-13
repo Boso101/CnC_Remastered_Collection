@@ -808,10 +808,10 @@ bool HouseClass::Can_Build(ObjectTypeClass const * type, HousesType house) const
 	
 	//Hacky way to let them build teams without breaking structure build order
 	// Just return true if its unit, inf or vessel
-	if (type->What_Am_I() == RTTI_VESSELTYPE || type->What_Am_I() == RTTI_UNITTYPE || type->What_Am_I() == RTTI_INFANTRYTYPE) 
+	/*if (type->What_Am_I() == RTTI_VESSELTYPE || type->What_Am_I() == RTTI_UNITTYPE || type->What_Am_I() == RTTI_INFANTRYTYPE) 
 	{
 		return (true);
-	}
+	}*/
 
 	/*
 	**	Special hack to get certain objects to exist for both sides in the game.
